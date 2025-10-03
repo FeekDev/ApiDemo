@@ -3,14 +3,21 @@ package com.sw2f.ApiDemo.Services;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sw2f.ApiDemo.Models.Bases;
+import com.sw2f.ApiDemo.Repositorio.BasesRepositorio;
 
 @Service
 public class BasesServices {
-    public ArrayList<Bases> listar() {
-        ArrayList<Bases> listado = new ArrayList<>();
+
+    @Autowired // Singleton
+    BasesRepositorio _repo;
+
+    public ArrayList<Bases> listar() { // Metodo publico porque lo utiliza el controller
+        return (ArrayList<Bases>)_repo.findAll();
+        /*ArrayList<Bases> listado = new ArrayList<>();
         Bases a = new Bases();
         
         a.setId(1);
@@ -19,6 +26,6 @@ public class BasesServices {
 
         listado.add(a);
 
-        return listado;
+        return listado;*/
     }
 }

@@ -1,4 +1,4 @@
-// Esta capa sirve para mandarle al protocolo http las respuestas a las peticiones, tambien envia el codigo de estado, lo envia en json
+// Esta capa sirve para mandarle al protocolo http las respuestas a las peticiones, tambien envia el codigo de estado, lo envia en json(parte externa)
 package com.sw2f.ApiDemo.Controller;
 import com.sw2f.ApiDemo.Models.Bases;
 import com.sw2f.ApiDemo.Services.BasesServices;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 // Uri del controlador
 @RequestMapping("/api/sql")
-public class basesSQL {
+public class BasesSQL {
 
     // Crear una instancia de la clase servicios
     @Autowired
