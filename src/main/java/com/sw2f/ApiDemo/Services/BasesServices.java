@@ -16,7 +16,7 @@ public class BasesServices {
     BasesRepositorio _repo;
 
     public ArrayList<Bases> listar() { // Metodo publico porque lo utiliza el controller
-        return (ArrayList<Bases>)_repo.findAll();
+        return (ArrayList<Bases>)_repo.findAll(); // Retorna todo lo que hay en la tabla
         /*ArrayList<Bases> listado = new ArrayList<>();
         Bases a = new Bases();
         

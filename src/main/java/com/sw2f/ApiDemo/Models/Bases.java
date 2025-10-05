@@ -1,7 +1,6 @@
 // Clases limpias que envian a los diferentes modelos
 package com.sw2f.ApiDemo.Models;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

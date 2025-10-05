@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
+// Accede a la base de datos
 public interface BasesRepositorio extends CrudRepository<Bases, Integer> {
 
 }
