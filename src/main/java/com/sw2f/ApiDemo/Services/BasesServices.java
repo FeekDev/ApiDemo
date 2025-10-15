@@ -28,4 +28,8 @@ public class BasesServices {
 
         return listado;*/
     }
+
+    public Bases guardar(Bases base) {
+        return _repo.save(base);
+    }
 }

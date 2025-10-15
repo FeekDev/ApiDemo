@@ -9,13 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 //tipo de api --> REST
 @RestController
 
 // Uri del controlador
-@RequestMapping("/api/sql")
-public class BasesSQL {
+@RequestMapping("/api")
+public class basesSQL {
 
     // Crear una instancia de la clase servicios
     @Autowired
@@ -27,5 +30,11 @@ public class BasesSQL {
         ArrayList<Bases> listado = _basesServices.listar();
 
         return listado;
+    }
+
+    @PostMapping("/crear")
+    public Bases Crear(@RequestBody Bases base) {
+        Bases rs = _basesServices.guardar(base);
+        return rs;
     }
 }
