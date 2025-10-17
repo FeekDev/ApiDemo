@@ -32,4 +32,13 @@ public class BasesServices {
     public Bases guardar(Bases base) {
         return _repo.save(base);
     }
+
+    public boolean eliminar(int id) {
+        try {
+            _repo.deleteById(id);
+            return true;
+        } catch (Exception err) {
+            return false;
+        }
+    }
 }
