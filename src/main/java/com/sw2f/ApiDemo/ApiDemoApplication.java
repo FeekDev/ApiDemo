@@ -1,5 +1,6 @@
 package com.sw2f.ApiDemo;
 
+import org.aspectj.apache.bcel.classfile.Module.Open;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -24,5 +25,8 @@ public class ApiDemoApplication {
 						.description("Documentacion de la API Demo")
 						);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> b6568f82820df1a3df8f28ab8bc6dd5b585827fc
 }
