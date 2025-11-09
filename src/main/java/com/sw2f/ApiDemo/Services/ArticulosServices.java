@@ -1,5 +1,5 @@
 package com.sw2f.ApiDemo.Services;
-import com.sw2f.ApiDemo.Models.Articulos;
+import com.sw2f.ApiDemo.Models.Articulo;
 import com.sw2f.ApiDemo.Repositorio.ArticulosRepositorio;
 
 import java.util.ArrayList;
@@ -13,11 +13,11 @@ public class ArticulosServices {
     @Autowired
     ArticulosRepositorio _repoArticulos;
 
-    public ArrayList<Articulos> obtenerArticulos() {
-        return (ArrayList<Articulos>) _repoArticulos.findAll();
+    public ArrayList<Articulo> obtenerArticulos() {
+        return (ArrayList<Articulo>) _repoArticulos.findAll();
     }
 
-    public Articulos guardar(Articulos articulo) {
+    public Articulo guardar(Articulo articulo) {
         return _repoArticulos.save(articulo);
     }
 

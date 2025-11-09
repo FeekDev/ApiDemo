@@ -8,11 +8,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity // Es una entidad se le agrega el decorador
-@Table(name = "Articulos")
+@Table(name = "Articulo")
 /* le dice a JPA en qué tabla de la base de datos 
 debe interactuar una entidad cuando se realizan 
 operaciones como persistencia, borrado o selección.  */
-public class Articulos {
+public class Articulo {
     @Id // Llave primaria
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto incremental
     @Column(unique = true, nullable = false) // No nulo y unico

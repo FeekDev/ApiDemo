@@ -25,8 +25,4 @@ public class ApiDemoApplication {
 						.description("Documentacion de la API Demo")
 						);
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> b6568f82820df1a3df8f28ab8bc6dd5b585827fc
 }

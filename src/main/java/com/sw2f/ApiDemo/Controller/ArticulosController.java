@@ -1,7 +1,7 @@
 package com.sw2f.ApiDemo.Controller;
 
 import java.util.ArrayList;
-import com.sw2f.ApiDemo.Models.Articulos;
+import com.sw2f.ApiDemo.Models.Articulo;
 import com.sw2f.ApiDemo.Services.ArticulosServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,27 +25,27 @@ public class ArticulosController {
     ArticulosServices _servicioArticulos;
 
     @GetMapping("/listarArticulos")
-    public ArrayList<Articulos> obtenerArticulos() {
-        ArrayList<Articulos> listaArticulos = _servicioArticulos.obtenerArticulos();
+    public ArrayList<Articulo> obtenerArticulos() {
+        ArrayList<Articulo> listaArticulos = _servicioArticulos.obtenerArticulos();
         return listaArticulos;
     }
 
     @PostMapping("/CrU")
-    public Articulos Crear(@RequestBody Articulos articulo) {
-        Articulos rs = _servicioArticulos.guardar(articulo);
+    public Articulo Crear(@RequestBody Articulo articulo) {
+        Articulo rs = _servicioArticulos.guardar(articulo);
         return rs;
     }
 
     @PutMapping("/CUp")
-    public Articulos Actualizar(@RequestBody Articulos articulo) {
-        Articulos rs = _servicioArticulos.guardar(articulo);
+    public Articulo Actualizar(@RequestBody Articulo articulo) {
+        Articulo rs = _servicioArticulos.guardar(articulo);
         return rs;
     }
 
     @DeleteMapping("eliminar/{id}")
-    public Class<? extends BodyBuilder> eliminar(@PathVariable int id) {
+    public ResponseEntity<Void> eliminar(@PathVariable int id) {
         boolean ok = _servicioArticulos.eliminar(id);
-        return (ok) ? ResponseEntity.ok().getClass() : (Class<? extends BodyBuilder>) ResponseEntity.notFound().getClass();
+        return (ok) ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 
 }
