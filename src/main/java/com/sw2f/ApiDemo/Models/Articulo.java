@@ -23,6 +23,7 @@ public class Articulo {
     @Column(unique = true, nullable = false)
     private String nombre_proveedor;
     private int stock_articulo;
+    private int idusuario; // Llave foranea
 
     public int getCodigo_articulo() {
         return codigo_articulo;
@@ -55,5 +56,11 @@ public class Articulo {
         this.stock_articulo = stock_articulo;
     }
 
-    
+    public int getIdusuario() {
+        return idusuario;
+    }
+
+    public void setIdusuario(int idusuario) {
+        this.idusuario = idusuario;
+    }
 }
