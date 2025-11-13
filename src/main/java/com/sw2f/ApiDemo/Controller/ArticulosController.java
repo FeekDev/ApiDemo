@@ -18,25 +18,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/")
 public class ArticulosController {
 
     @Autowired
     ArticulosServices _servicioArticulos;
 
-    @GetMapping("/listarArticulos")
+    @GetMapping("listarArticulos")
     public ArrayList<Articulo> obtenerArticulos() {
         ArrayList<Articulo> listaArticulos = _servicioArticulos.obtenerArticulos();
         return listaArticulos;
     }
 
-    @PostMapping("/CrU")
+    @PostMapping("CrU")
     public Articulo Crear(@RequestBody Articulo articulo) {
         Articulo rs = _servicioArticulos.guardar(articulo);
         return rs;
     }
 
-    @PutMapping("/CUp")
+    @PutMapping("CUp")
     public Articulo Actualizar(@RequestBody Articulo articulo) {
         Articulo rs = _servicioArticulos.guardar(articulo);
         return rs;

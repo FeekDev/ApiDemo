@@ -30,6 +30,8 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<property name="hibernate.transaction.jta.platform">
+			org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform</property>
 	</properties>
 	<dependencies>
 		<dependency>
